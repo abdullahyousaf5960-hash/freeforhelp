@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050b14">
+  <title>FREEFORHELP | Moviebox Download</title>
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;font-family:Arial,Helvetica,sans-serif;color:#fff;
+      background:radial-gradient(ellipse at 50% 0%,#08264b 0%,#050b14 48%,#020408 100%);
+      display:flex;align-items:center;justify-content:center;padding:24px}
+    .wrap{width:min(100%,760px);text-align:center}
+    .banner{width:100%;height:auto;display:block;border-radius:20px;
+      box-shadow:0 18px 55px #000a;border:1px solid #17385a}
+    .panel{margin:22px auto 0;padding:28px 22px;max-width:620px;
+      background:#081321;border:1px solid #17432f;border-radius:20px;
+      box-shadow:0 0 35px #00e67618}
+    h1{margin:0 0 10px;font-size:clamp(25px,5vw,38px)}
+    h1 span{color:#00e676}
+    p{color:#c7d2df;line-height:1.6;margin:8px 0 20px}
+    .download{display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      min-height:58px;padding:0 30px;border-radius:12px;text-decoration:none;
+      color:#031008;font-size:19px;font-weight:800;
+      background:linear-gradient(135deg,#b7ff38,#00df78);
+      box-shadow:0 8px 25px #00e67640;transition:.2s}
+    .download:hover{transform:translateY(-2px);filter:brightness(1.08)}
+    .note{font-size:13px;color:#8fa2b8;margin:17px 0 0}
+    .brand{margin:26px auto 0;padding:22px 20px;max-width:620px;
+      background:linear-gradient(145deg,#101d2c,#07111d);border:1px solid #29445d;
+      border-radius:18px;text-align:center}
+    .brand-name{font-size:clamp(25px,5vw,34px);font-weight:900;letter-spacing:2px;
+      color:#b7ff38;margin:0 0 8px}
+    .brand p{margin:8px 0;color:#c7d2df}
+    .contact{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+      min-height:48px;margin-top:12px;padding:0 22px;border-radius:11px;
+      background:#20c763;color:#04140a;text-decoration:none;font-weight:800;
+      transition:.2s}
+    .contact:hover{transform:translateY(-2px);filter:brightness(1.08)}
+    .status{margin-top:12px;font-size:13px;color:#9be9bb}
+    footer{font-size:12px;color:#718096;margin-top:20px}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <img class="banner" src="moviebox-banner.png" alt="Moviebox HD Premium promotional banner">
+    <section class="panel">
+      <h1>Moviebox <span>HD</span> Premium</h1>
+      <p>Download the Moviebox installation file to your device.</p>
+      <a class="download" href="https://drive.google.com/file/d/1ZImqro2nvXxUIDMEcuyE9dQDSpMc_eHS/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+        <span aria-hidden="true">⬇</span> Download Moviebox
+      </a>
+      <div class="status" id="status">The download starts when you press the button.</div>
+      <p class="note">You will be redirected to Google Drive to download the file.</p>
+    </section>
+    <section class="brand" aria-label="About FREEFORHELP">
+      <div class="brand-name">FREEFORHELP</div>
+      <p><strong>Owned by Abdullah Yousaf</strong></p>
+      <p>Helping to give you freedom with useful digital resources. Need an app or website for your idea or business? We can create it for you.</p>
+      <a class="contact" href="https://wa.me/923200455607" target="_blank" rel="noopener noreferrer">
+        <span aria-hidden="true">✆</span> Contact Us on WhatsApp
+      </a>
+    </section>
+    <footer>FREEFORHELP · Digital freedom, made simpler.<br>Only download and share app files you own or are authorized to distribute.</footer>
+  </main>
+  <script>
+    const link = document.querySelector('.download');
+    link.addEventListener('click', () => {
+      document.getElementById('status').textContent =
+        'Your browser is preparing the download…';
+    });
+  </script>
+</body>
+</html>
